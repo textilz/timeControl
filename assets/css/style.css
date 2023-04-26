@@ -1,0 +1,126 @@
+:root {
+    --text: 20px;
+
+    --padding: 15px;
+
+    --border-radius: 5px;
+
+    --gutter: 20px;
+
+    --color-bg-component: #F6F6F6;
+
+    --color-red: #721817;
+    --color-blue: #2B4162;
+    --color-green: #0B6E4F;
+    --color-yellow: #F18F01;
+    --color-orange: #F26419;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.hourly-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+}
+
+.hourly-item_green:hover {
+    background-color: var(--color-green);
+}
+
+.hourly-item_green .hourly-item__hour {
+    background-color: var(--color-green);
+}
+
+.hourly-item_red:hover {
+    background-color: var(--color-red);
+}
+
+.hourly-item_red .hourly-item__hour {
+    background-color: var(--color-red);
+}
+
+.hourly-item_blue:hover {
+    background-color: var(--color-blue);
+}
+
+.hourly-item_blue .hourly-item__hour {
+    background-color: var(--color-blue);
+}
+
+.hourly-item_yellow:hover {
+    background-color: var(--color-yellow);
+}
+
+.hourly-item_yellow .hourly-item__hour {
+    background-color: var(--color-yellow);
+}
+
+.hourly-item_orange:hover {
+    background-color: var(--color-orange);
+}
+
+.hourly-item_orange .hourly-item__hour {
+    background-color: var(--color-orange);
+}
+
+.hourly-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    transition: all .1s ease;
+}
+
+.hourly-item:hover {
+    color: white;
+}
+
+.hourly-item__hour {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hourly-item__task {
+    font-size: var(--text);
+    cursor: pointer;
+}
+
+.hourly-item__content {
+    display: flex;
+    gap: var(--gutter);
+    align-items: center;
+}
+
+.hourly-item__content_buttons {
+    padding: var(--padding);
+    background-color: white;
+    border-radius: var(--border-radius);
+}
+
+.hourly-item__icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    fill: #F6F6F6;
+}
+
+.list .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
