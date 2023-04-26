@@ -49,8 +49,12 @@ body {
     background-color: var(--color-yellow);
 }
 
-.tag-item_orange{
+.tag-item_orange {
     background-color: var(--color-orange);
+}
+
+.tag-item_add {
+    background-color: var(--color-gray);
 }
 
 .hourly-item_green:hover {
@@ -91,6 +95,10 @@ body {
 
 .hourly-item_orange .hourly-item__hour {
     background-color: var(--color-orange);
+}
+
+.hourly-item_add:hover {
+    color: black !important;
 }
 
 .hourly-item {
@@ -205,4 +213,78 @@ body {
     color: white;
     background-color: var(--color-gray);
     /*transform: translateY(-50%);*/
+}
+
+.hourly-item_add {
+    background-color: var(--color-bg-component);
+}
+
+.hourly-item_add form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+}
+
+.hourly-item__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hourly-item__content input {
+    border: none;
+    background-color: var(--color-bg-component);
+    outline: none;
+    font-size: var(--text);
+}
+
+.date-choose .date-choose__button {
+    padding: 5px 10px;
+    background-color: var(--color-gray);
+    color: white;
+    font-size: var(--text);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.date-choose input {
+    font-family: sans-serif;
+}
+
+.hourly-item_add form textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: var(--text);
+    font-family: sans-serif;
+    background-color: var(--color-bg-component);
+    resize: vertical;
+    min-height: 30px;
+}
+
+.hourly-item_add .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hourly-item_add .tags .tag-item {
+    cursor: pointer;
+}
+
+.tag-item__container {
+    position: relative;
+}
+
+.tag-item__dropdown {
+    position: absolute;
+    padding: var(--padding);
+    background-color: var(--color-bg-component);
+    border-radius: var(--border-radius);
+    left: calc(var(--padding) * -1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
