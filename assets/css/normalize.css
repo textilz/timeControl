@@ -6,3 +6,11 @@ body, ul, li, h1, h2, h3, p {
 body {
     box-sizing: border-box;
 }
+
+li {
+    list-style-type: none;
+}
+
+.hide {
+    display: none !important;
+}
