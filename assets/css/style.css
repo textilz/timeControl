@@ -32,6 +32,26 @@ body {
     gap: var(--gutter);
 }
 
+.tag-item_green {
+    background-color: var(--color-green);
+}
+
+.tag-item_red {
+    background-color: var(--color-red);
+}
+
+.tag-item_blue {
+    background-color: var(--color-blue);
+}
+
+.tag-item_yellow {
+    background-color: var(--color-yellow);
+}
+
+.tag-item_orange{
+    background-color: var(--color-orange);
+}
+
 .hourly-item_green:hover {
     background-color: var(--color-green);
 }
@@ -123,4 +143,40 @@ body {
 .list .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: var(--gutter);
+}
+
+.total .wrapper {
+    background-color: var(--color-bg-component);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+}
+
+.total-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.total-hours p {
+    font-size: var(--text);
+}
+
+.total-hours__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-item {
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    color: white;
+}
+
+.total-hours__times {
+    font-size: var(--text);
 }
