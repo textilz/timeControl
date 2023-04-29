@@ -7,7 +7,7 @@
 
     --gutter: 20px;
 
-    --color-bg-component: #F6F6F6;
+    --color-bg-component: #ececec;
 
     --color-red: #721817;
     --color-blue: #2B4162;
@@ -28,6 +28,7 @@ body {
 }
 
 .hourly-list {
+    grid-area: list;
     display: flex;
     flex-direction: column;
     gap: var(--gutter);
@@ -152,7 +153,12 @@ body {
 .list .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-areas: "list total";
     gap: var(--gutter);
+}
+
+.total {
+    grid-area: total;
 }
 
 .total .wrapper {
@@ -305,4 +311,12 @@ body {
     padding: 5px var(--padding);
     font-size: var(--text);
     cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .list .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "total" "list";
+    }
+
 }
