@@ -226,8 +226,17 @@ body {
     gap: var(--gutter);
 }
 
-.hourly-item__content {
+.hourly-item_add .hourly-item__content {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.hourly-item__content {
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     justify-content: space-between;
 }
@@ -260,7 +269,7 @@ body {
     font-family: sans-serif;
     background-color: var(--color-bg-component);
     resize: vertical;
-    min-height: 30px;
+    min-height: 80px;
 }
 
 .hourly-item_add .tags {
@@ -287,4 +296,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.hourly-item__submit {
+    border-radius: var(--border-radius);
+    background-color: var(--color-gray);
+    color: white;
+    padding: 5px var(--padding);
+    font-size: var(--text);
+    cursor: pointer;
 }
