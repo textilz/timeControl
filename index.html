@@ -11,7 +11,7 @@
 </head>
 <body>
 	<header>
-		потом
+
 	</header>
 	<main class="list">
 <!--		<aside>меню</aside>-->
@@ -23,27 +23,31 @@
 				<div class="hourly-item hourly-item_add">
 					<form action="">
 						<div class="hourly-item__content">
-							<input type="text" name="" placeholder="Колво часов">
+							<div class="hourly-counter">
+								<div class="hourly-counter__button hourly-counter__button_minus">-</div>
+								<input type="text" name="" placeholder="" required value="0" maxlength="3">
+								<div class="hourly-counter__button hourly-counter__button_plus">+</div>
+							</div>
 							<div class="date-choose">
 								<div class="date-choose__button">Изменить дату</div>
-								<input type="date" class="hide">
+								<input type="date">
 							</div>
 						</div>
 						<textarea name="" placeholder="Выполненная задача"></textarea>
 						<div class="tags">
-							<div class="tag-item tag-item_yellow">JS</div>
-							<div class="tag-item tag-item_green">Figma</div>
+							<div class="tag-item color_yellow">JS</div>
+							<div class="tag-item color_green">Figma</div>
 							<div class="tag-item__container">
 								<div class="tag-item__button tag-item tag-item_add">Метки</div>
 								<ul class="tag-item__dropdown hide">
-									<li class="tag-item tag-item_yellow">JS</li>
-									<li class="tag-item tag-item_green">Figma</li>
-									<li class="tag-item tag-item_red">Верстка</li>
-									<li class="tag-item tag-item_blue">PHP</li>
+									<li class="tag-item color_yellow">JS</li>
+									<li class="tag-item color_green">Figma</li>
+									<li class="tag-item color_red">Верстка</li>
+									<li class="tag-item color_blue">PHP</li>
 								</ul>
 							</div>
 						</div>
-						<button type="submit" class="hourly-item__submit">Добавить</button>
+						<button type="submit" class="button-submit">Добавить</button>
 					</form>
 				</div>
 				<div class="hourly-item hourly-item_green">
@@ -55,13 +59,13 @@
 							Разработка главной страницы в фигме
 						</div>
 					</div>
-					<div class="hourly-item__content hourly-item__content_buttons">
-						<div class="hourly-item__icon hourly-item__icon_edit">
+					<div class="edit-block">
+						<div class="edit-block__icon edit-block__icon_edit">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6.25 23.75H8L18.7812 12.9688L17.0312 11.2188L6.25 22V23.75ZM24.125 11.1563L18.8125 5.90625L20.5625 4.15625C21.0417 3.67708 21.6304 3.4375 22.3288 3.4375C23.0271 3.4375 23.6154 3.67708 24.0937 4.15625L25.8437 5.90625C26.3229 6.38542 26.5729 6.96375 26.5937 7.64125C26.6146 8.31875 26.3854 8.89667 25.9063 9.375L24.125 11.1563ZM22.3125 13L9.0625 26.25H3.75V20.9375L17 7.6875L22.3125 13ZM17.9062 12.0938L17.0312 11.2188L18.7812 12.9688L17.9062 12.0938Z" fill="black"/>
 							</svg>
 						</div>
-						<div class="hourly-item__icon hourly-item__icon_delete">
+						<div class="edit-block__icon edit-block__icon_delete">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.75 26.25C8.0625 26.25 7.47375 26.005 6.98375 25.515C6.49375 25.025 6.24917 24.4367 6.25 23.75V7.5H5V5H11.25V3.75H18.75V5H25V7.5H23.75V23.75C23.75 24.4375 23.505 25.0263 23.015 25.5163C22.525 26.0063 21.9367 26.2508 21.25 26.25H8.75ZM21.25 7.5H8.75V23.75H21.25V7.5ZM11.25 21.25H13.75V10H11.25V21.25ZM16.25 21.25H18.75V10H16.25V21.25Z" fill="black"/>
 							</svg>
@@ -77,17 +81,16 @@
 							Разработка кода для работающей кнопки сортировки
 						</div>
 					</div>
-					<div class="hourly-item__content hourly-item__content_buttons">
-						<div class="hourly-item__icon hourly-item__icon_edit">
+					<div class="edit-block">
+						<div class="edit-block__icon edit-block__icon_edit">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6.25 23.75H8L18.7812 12.9688L17.0312 11.2188L6.25 22V23.75ZM24.125 11.1563L18.8125 5.90625L20.5625 4.15625C21.0417 3.67708 21.6304 3.4375 22.3288 3.4375C23.0271 3.4375 23.6154 3.67708 24.0937 4.15625L25.8437 5.90625C26.3229 6.38542 26.5729 6.96375 26.5937 7.64125C26.6146 8.31875 26.3854 8.89667 25.9063 9.375L24.125 11.1563ZM22.3125 13L9.0625 26.25H3.75V20.9375L17 7.6875L22.3125 13ZM17.9062 12.0938L17.0312 11.2188L18.7812 12.9688L17.9062 12.0938Z" fill="black"/>
 							</svg>
 						</div>
-						<div class="hourly-item__icon hourly-item__icon_delete">
+						<div class="edit-block__icon edit-block__icon_delete">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.75 26.25C8.0625 26.25 7.47375 26.005 6.98375 25.515C6.49375 25.025 6.24917 24.4367 6.25 23.75V7.5H5V5H11.25V3.75H18.75V5H25V7.5H23.75V23.75C23.75 24.4375 23.505 25.0263 23.015 25.5163C22.525 26.0063 21.9367 26.2508 21.25 26.25H8.75ZM21.25 7.5H8.75V23.75H21.25V7.5ZM11.25 21.25H13.75V10H11.25V21.25ZM16.25 21.25H18.75V10H16.25V21.25Z" fill="black"/>
 							</svg>
-
 						</div>
 					</div>
 				</div>
@@ -103,17 +106,16 @@
 							Верстка главной страницы
 						</div>
 					</div>
-					<div class="hourly-item__content hourly-item__content_buttons">
-						<div class="hourly-item__icon hourly-item__icon_edit">
+					<div class="edit-block">
+						<div class="edit-block__icon edit-block__icon_edit">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6.25 23.75H8L18.7812 12.9688L17.0312 11.2188L6.25 22V23.75ZM24.125 11.1563L18.8125 5.90625L20.5625 4.15625C21.0417 3.67708 21.6304 3.4375 22.3288 3.4375C23.0271 3.4375 23.6154 3.67708 24.0937 4.15625L25.8437 5.90625C26.3229 6.38542 26.5729 6.96375 26.5937 7.64125C26.6146 8.31875 26.3854 8.89667 25.9063 9.375L24.125 11.1563ZM22.3125 13L9.0625 26.25H3.75V20.9375L17 7.6875L22.3125 13ZM17.9062 12.0938L17.0312 11.2188L18.7812 12.9688L17.9062 12.0938Z" fill="black"/>
 							</svg>
 						</div>
-						<div class="hourly-item__icon hourly-item__icon_delete">
+						<div class="edit-block__icon edit-block__icon_delete">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.75 26.25C8.0625 26.25 7.47375 26.005 6.98375 25.515C6.49375 25.025 6.24917 24.4367 6.25 23.75V7.5H5V5H11.25V3.75H18.75V5H25V7.5H23.75V23.75C23.75 24.4375 23.505 25.0263 23.015 25.5163C22.525 26.0063 21.9367 26.2508 21.25 26.25H8.75ZM21.25 7.5H8.75V23.75H21.25V7.5ZM11.25 21.25H13.75V10H11.25V21.25ZM16.25 21.25H18.75V10H16.25V21.25Z" fill="black"/>
 							</svg>
-
 						</div>
 					</div>
 				</div>
@@ -126,17 +128,16 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur deleniti dolores earum, explicabo, hic, iure quae repellendus saepe sequi sunt voluptatum. Dicta odio quibusdam repellat similique! Alias at, atque!
 						</div>
 					</div>
-					<div class="hourly-item__content hourly-item__content_buttons">
-						<div class="hourly-item__icon hourly-item__icon_edit">
+					<div class="edit-block">
+						<div class="edit-block__icon edit-block__icon_edit">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6.25 23.75H8L18.7812 12.9688L17.0312 11.2188L6.25 22V23.75ZM24.125 11.1563L18.8125 5.90625L20.5625 4.15625C21.0417 3.67708 21.6304 3.4375 22.3288 3.4375C23.0271 3.4375 23.6154 3.67708 24.0937 4.15625L25.8437 5.90625C26.3229 6.38542 26.5729 6.96375 26.5937 7.64125C26.6146 8.31875 26.3854 8.89667 25.9063 9.375L24.125 11.1563ZM22.3125 13L9.0625 26.25H3.75V20.9375L17 7.6875L22.3125 13ZM17.9062 12.0938L17.0312 11.2188L18.7812 12.9688L17.9062 12.0938Z" fill="black"/>
 							</svg>
 						</div>
-						<div class="hourly-item__icon hourly-item__icon_delete">
+						<div class="edit-block__icon edit-block__icon_delete">
 							<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.75 26.25C8.0625 26.25 7.47375 26.005 6.98375 25.515C6.49375 25.025 6.24917 24.4367 6.25 23.75V7.5H5V5H11.25V3.75H18.75V5H25V7.5H23.75V23.75C23.75 24.4375 23.505 25.0263 23.015 25.5163C22.525 26.0063 21.9367 26.2508 21.25 26.25H8.75ZM21.25 7.5H8.75V23.75H21.25V7.5ZM11.25 21.25H13.75V10H11.25V21.25ZM16.25 21.25H18.75V10H16.25V21.25Z" fill="black"/>
 							</svg>
-
 						</div>
 					</div>
 				</div>
@@ -147,10 +148,10 @@
 					<div class="total-hours">
 						<p>Часов в проекте: 200</p>
 						<div class="total-hours__tags">
-							<div class="tag-item tag-item_yellow">JS: 20</div>
-							<div class="tag-item tag-item_green">Figma: 20</div>
-							<div class="tag-item tag-item_red">Верстка: 20</div>
-							<div class="tag-item tag-item_blue">PHP: 20</div>
+							<div class="tag-item color_yellow">JS: 20</div>
+							<div class="tag-item color_green">Figma: 20</div>
+							<div class="tag-item color_red">Верстка: 20</div>
+							<div class="tag-item color_blue">PHP: 20</div>
 						</div>
 					</div>
 					<div class="total-hours__times">
@@ -161,5 +162,61 @@
 			</section>
 		</div>
 	</main>
+	<div class="modal">
+		<form class="modal__content">
+			<div class="modal__header">
+				<h2>Подробнее</h2>
+				<div class="modal__close">
+					<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="black"/>
+					</svg>
+
+				</div>
+			</div>
+			<div class="modal__container">
+				<div class="hourly-counter">
+					<div class="hourly-counter__button hourly-counter__button_minus">-</div>
+					<input type="text" name="" placeholder="" required value="0" maxlength="3">
+					<div class="hourly-counter__button hourly-counter__button_plus">+</div>
+				</div>
+				<div class="date-choose">
+					<div class="date-choose__button">Изменить дату</div>
+					<input type="date" class="" value="2023-04-01">
+				</div>
+			</div>
+
+			<textarea readonly> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur deleniti dolores earum, explicabo, hic, iure quae repellendus saepe sequi sunt voluptatum. Dicta odio quibusdam repellat similique! Alias at, atque!</textarea>
+			<div class="modal__container">
+				<div class="tags">
+					<div class="tag-item color_yellow">JS</div>
+					<div class="tag-item color_green">Figma</div>
+					<div class="tag-item__container">
+						<div class="tag-item__button tag-item tag-item_add">Метки</div>
+						<ul class="tag-item__dropdown hide">
+							<li class="tag-item color_yellow">JS</li>
+							<li class="tag-item color_green">Figma</li>
+							<li class="tag-item color_red">Верстка</li>
+							<li class="tag-item color_blue">PHP</li>
+						</ul>
+					</div>
+				</div>
+				<div class="edit-block">
+					<div class="edit-block__icon edit-block__icon_edit">
+						<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.25 23.75H8L18.7812 12.9688L17.0312 11.2188L6.25 22V23.75ZM24.125 11.1563L18.8125 5.90625L20.5625 4.15625C21.0417 3.67708 21.6304 3.4375 22.3288 3.4375C23.0271 3.4375 23.6154 3.67708 24.0937 4.15625L25.8437 5.90625C26.3229 6.38542 26.5729 6.96375 26.5937 7.64125C26.6146 8.31875 26.3854 8.89667 25.9063 9.375L24.125 11.1563ZM22.3125 13L9.0625 26.25H3.75V20.9375L17 7.6875L22.3125 13ZM17.9062 12.0938L17.0312 11.2188L18.7812 12.9688L17.9062 12.0938Z" fill="black"/>
+						</svg>
+					</div>
+					<div class="edit-block__icon edit-block__icon_delete">
+						<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.75 26.25C8.0625 26.25 7.47375 26.005 6.98375 25.515C6.49375 25.025 6.24917 24.4367 6.25 23.75V7.5H5V5H11.25V3.75H18.75V5H25V7.5H23.75V23.75C23.75 24.4375 23.505 25.0263 23.015 25.5163C22.525 26.0063 21.9367 26.2508 21.25 26.25H8.75ZM21.25 7.5H8.75V23.75H21.25V7.5ZM11.25 21.25H13.75V10H11.25V21.25ZM16.25 21.25H18.75V10H16.25V21.25Z" fill="black"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="button-submit">Обновить</button>
+
+		</form>
+		<div class="modal__bg"></div>
+	</div>
 </body>
 </html>
